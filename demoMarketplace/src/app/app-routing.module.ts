@@ -1,20 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CommonModule } from '@angular/common';
 
 const routes: Routes = [
-  { path: 'market',
+  { path: 'product-list',
   loadChildren: () =>
-    import('./components/product-list/product-lst.module').then(
-      (m) => m.ProductLstModule
+    import('./components/product-list/product-list.module').then(
+      (m) => m.ProductListModule
     ),
 },
-  { path: 'product-list',
-    loadChildren: () =>
-      import('./components/product-list/product-lst.module').then(
-        (m) => m.ProductLstModule
-      ),
-  },
   { path: 'header',
   loadChildren: () =>
     import('./components/header/header.module').then(
@@ -24,7 +17,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes), CommonModule],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

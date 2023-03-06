@@ -1,0 +1,15 @@
+.row{
+    width: 100%;
+    background-color: aliceblue;
+}
+.rowTitle{
+    float: left;
+}
+.rowPrice{
+    overflow: hidden;
+    padding-left: 30px;
+    float: left;
+}
+.rowAdd{
+    float: right;
+}
