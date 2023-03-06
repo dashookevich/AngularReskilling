@@ -1,0 +1,12 @@
+
+.horisontal-ul li {
+    display: inline-block;
+    margin-right: 5px; 
+    border: 1px solid #000; 
+    padding: 3px;
+ }
+.header-cart{
+    float: right; 
+    background-color: rgb(194, 127, 127);   
+
+}
