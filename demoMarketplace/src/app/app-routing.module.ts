@@ -8,10 +8,10 @@ const routes: Routes = [
       (m) => m.ProductListModule
     ),
 },
-  { path: 'header',
+  { path: 'cart',
   loadChildren: () =>
-    import('./components/header/header.module').then(
-      (m) => m.HeaderModule
+    import('./components/cart/cart.module').then(
+      (m) => m.CartModule
     ),
 },
 ];
