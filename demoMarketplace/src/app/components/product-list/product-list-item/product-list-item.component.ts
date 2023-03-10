@@ -1,5 +1,4 @@
-import { Component } from '@angular/core';
-import { Output, EventEmitter } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Product } from 'src/app/models/product';
 
 @Component({
@@ -9,15 +8,10 @@ import { Product } from 'src/app/models/product';
 })
 export class ProductListItemComponent {
 
-  @Output() newItemEvent = new EventEmitter<string>();
+  @Output() newItemEvent = new EventEmitter<Product>();
+  @Input() product: Product;
   
-  addNewItem(value: string) {
-    this.newItemEvent.emit(value);
-  };
-
-  product: Product = {
-    id: 1,
-    title: 'Lego',
-    price: 5
+  addNewItem() {
+    this.newItemEvent.emit(this.product);
   };
 }

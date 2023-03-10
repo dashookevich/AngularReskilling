@@ -7,6 +7,7 @@ import { ProductComponent } from './components/product/product.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ProductListModule } from './components/product-list/product-list.module';
 import { ProductModule } from './components/product/product.module';
+import { HttpClientModule } from '@angular/common/http';
 import { CartComponent } from './components/cart/cart.component';
 import { CartModule } from './components/cart/cart.module';
 
@@ -20,7 +21,8 @@ import { CartModule } from './components/cart/cart.module';
     AppRoutingModule,
     ProductListModule,
     ProductModule,
-    CartModule
+    CartModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
