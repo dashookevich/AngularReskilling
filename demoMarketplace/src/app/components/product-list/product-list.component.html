@@ -1,0 +1,11 @@
+<div clas="productList">
+    <p>List of items:</p>
+    <ul>
+        <li class="list-group-item m-3" *ngFor="let prod of products">
+            <app-product-list-item 
+                (newItemEvent)="addItem($event)"
+                [product] = "prod"
+                ></app-product-list-item>
+        </li>
+    </ul>
+</div>
